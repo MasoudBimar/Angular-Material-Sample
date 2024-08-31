@@ -1,6 +1,5 @@
-@import '~@angular/material/_theming';
-
-@include mat-core();
+// @use "@angular/material" as mat;
+// @include mat.core();
 
 // Mixin that renders all of the core styles that are not theme-dependent.
 // @mixin mat-core($typography-config: null) {
@@ -15,13 +14,13 @@
 // }
 
 
-$app-primary: mat-palette($mat-blue , 600); // create pallete
-$app-accent: mat-palette($mat-yellow, 700); // create pallete
-$app-warn: mat-palette($mat-red); // create pallete
+// $app-primary: mat.m2-define-palette($mat-primary , 600); // create pallete
+// $app-accent: mat.m2-define-palette($mat-accent, 700); // create pallete
+// $app-warn: mat.m2-define-palette($mat-warn); // create pallete
 
 // theme is combination of multiple pallete
 
-$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+// $app-theme: mat.m2-define-light-theme($app-primary, $app-accent, $app-warn);
 // $app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 
-@include angular-material-theme($app-theme);
+// @include angular-material-theme($app-theme);
