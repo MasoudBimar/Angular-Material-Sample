@@ -1,0 +1,78 @@
+// ==================================> appproach 1
+// h1 {
+//   color: blue;
+// }
+
+// h2 {
+//   color: blue;
+// }
+
+// ==================================> appproach 2
+// h1,
+// h2 {
+//   color: blue;
+// }
+
+// ==================================> appproach 3
+
+@import "another.scss";
+// just like we have it in css
+// we can import another sass file
+// sass is going to caoncatenate all of sass file into one file
+
+$color: blue;
+
+h1 {
+  //...
+  color: $color;
+}
+
+h1 {
+  //...
+  color: $color;
+}
+
+// ======================================= Mixins
+
+.box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.modern-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+// oopcss
+// variables
+// mixins : collection of multiple attributes
+
+@mixin soft-border{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.box {
+    @include soft-border() // why like a function ???
+  }
+  .modern-box {
+    @include soft-border() // why like a function ???
+  }
+
+//   parametric mixin
+@mixin soft-border($border-radius){
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    padding: 10px;
+}
+
+.box {
+    @include soft-border(5px) // why like a function ???
+  }
+  .modern-box {
+    @include soft-border(10px) // why like a function ???
+  }

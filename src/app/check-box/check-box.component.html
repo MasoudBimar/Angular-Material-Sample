@@ -1,0 +1,25 @@
+<mat-checkbox [checked]="checked" (change)="checkboxChanged()">
+   test checkbox
+</mat-checkbox>
+
+
+<mat-checkbox [(ngModel)]="checked" color="accent" (ngModelChange)="checkboxChanged()">
+    test checkbox
+ </mat-checkbox>
+
+ <ul>
+     <li *ngFor="let item of items">
+        <mat-checkbox [(ngModel)]="item.done" color="accent" (ngModelChange)="checkboxChanged()">
+            {{item.name}}
+         </mat-checkbox>
+     </li>
+ </ul>
+
+ <ng-container *ngFor="let item of items">
+    <mat-checkbox [(ngModel)]="item.done" color="accent" (ngModelChange)="checkboxChanged()">
+        {{item.name}}
+     </mat-checkbox>
+</ng-container>
+
+
+

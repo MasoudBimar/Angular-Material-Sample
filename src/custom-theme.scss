@@ -1,0 +1,27 @@
+@import '~@angular/material/_theming';
+
+@include mat-core();
+
+// Mixin that renders all of the core styles that are not theme-dependent.
+// @mixin mat-core($typography-config: null) {
+//   @include angular-material-typography($typography-config);
+//   @include mat-ripple();
+//   @include cdk-a11y();
+//   @include cdk-overlay();
+//   @include cdk-text-field();
+
+//   @include _mat-strong-focus-indicators-positioning();
+//   @include _mat-mdc-core();
+// }
+
+
+$app-primary: mat-palette($mat-blue , 600); // create pallete
+$app-accent: mat-palette($mat-yellow, 700); // create pallete
+$app-warn: mat-palette($mat-red); // create pallete
+
+// theme is combination of multiple pallete
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+// $app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+
+@include angular-material-theme($app-theme);

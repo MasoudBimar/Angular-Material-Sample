@@ -1,0 +1,11 @@
+{{currentIndex}}
+<mat-tab-group [selectedIndex]="currentIndex" (selectedTabChange)="tabChange($event)">
+    <mat-tab label="tab 1">
+        tab 1 content goes here
+    </mat-tab>
+    <mat-tab label="tab 2">
+        tab 2 content goes here
+
+        <button mat-raised-button (click)="test()"> Button 1</button>
+    </mat-tab>
+</mat-tab-group>
